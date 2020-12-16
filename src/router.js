@@ -1,9 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import red from "@/views/screens/red";
-import yellow from "@/views/screens/yellow";
-import green from "@/views/screens/green";
+import red from "@/views/red";
+import yellow from "@/views/yellow";
+import green from "@/views/green";
 
 Vue.use(Router);
 
