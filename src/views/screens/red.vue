@@ -6,13 +6,14 @@
 
 <script>
 import timer from "@/components/timer";
-import { timeSettings } from "@/main.js";
+import { timeSettings, colors } from "@/main.js";
 export default {
   components: {
     timer,
   },
   data: () => ({
     counter: timeSettings.Red,
+    isBlinking: false,
   }),
   mounted() {
     this.startTheCount();
@@ -21,8 +22,11 @@ export default {
     startTheCount() {
       setInterval(() => {
         --this.counter;
+        if (this.counter === 3) {
+          this.$emit("screenBlinking");
+        }
         if (!this.counter) {
-          this.$router.push("/yellow");
+          this.$router.push(colors[1]);
         }
       }, 1000);
     },

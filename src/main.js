@@ -10,7 +10,9 @@ const timeSettings = {
   Red: 10,
   Blink: 3,
 };
-export { timeSettings };
+const colors = ["red", "yellow", "green"];
+
+export { timeSettings, colors };
 
 new Vue({
   router,
